@@ -1,0 +1,361 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #141414;
+  color: #fff;
+}
+
+/* Category Titles */
+.category {
+  margin: 40px 20px;
+}
+
+.category h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Books Row */
+.books-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Book Cards */
+.book-card {
+  position: relative;
+  width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background: #222;
+}
+
+.book-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Prize Tag */
+.prize-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: gold;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.book-card:hover .prize-tag {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.book-card:hover .overlay {
+  opacity: 1;
+}
+
+.book-card.expanded .overlay {
+  display: none !important;
+}
+
+.overlay h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.overlay p {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #aaa;
+}
+
+.overlay button {
+  padding: 6px 12px;
+  background: #e50914;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Expanded Card */
+.book-card.expanded {
+  width: 500px;
+  height: auto;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.book-card.expanded img {
+  height: 300px;
+}
+
+.expanded-info {
+  display: none;
+  padding: 15px;
+  background: #181818;
+  color: #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+.book-card.expanded .expanded-info {
+  display: block;
+}
+
+/* Expanded Actions */
+.expanded-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.expanded-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.expanded-actions button:first-child {
+  background: #444;
+  color: #fff;
+}
+
+.borrow-btn {
+  background: #e50914;
+  color: #fff;
+}
+
+.borrow-btn:hover {
+  background: #b20710;
+}
+
+/* Navigation Bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #141414;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #bbb;
+  font-weight: 600;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #e50914;
+  border-bottom: 2px solid #e50914;
+}
+
+/* Footer center */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 23px;
+  color: #ffffff;
+  border-top: 1px solid #333;
+  margin-top: 50px;
+}
+
+/* Borrow Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #181818;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  color: #fff;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn {
+  background: #e50914;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.remove-btn:hover {
+  background: #b20710;
+}
+
+.close-modal {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-modal:hover {
+  color: #fff;
+}
+
+
+/* Page Load Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.book-card {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0; /* start hidden */
+}
+
+/* Staggered animation for each card */
+.book-card:nth-child(1) { animation-delay: 0.2s; }
+.book-card:nth-child(2) { animation-delay: 0.4s; }
+.book-card:nth-child(3) { animation-delay: 0.6s; }
+.book-card:nth-child(4) { animation-delay: 0.8s; }
+.book-card:nth-child(5) { animation-delay: 1s; }
+
+
+/* === Page Load Animations === */
+
+/* Category Title Animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.category h2 {
+  animation: slideInLeft 0.8s ease forwards;
+  opacity: 0; /* hidden at start */
+}
+
+/* Book Card Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.book-card {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0; /* hidden at start */
+}
+
+/* Staggered delays for book cards inside each row */
+.books-row .book-card:nth-child(1) { animation-delay: 0.2s; }
+.books-row .book-card:nth-child(2) { animation-delay: 0.4s; }
+.books-row .book-card:nth-child(3) { animation-delay: 0.6s; }
+.books-row .book-card:nth-child(4) { animation-delay: 0.8s; }
+.books-row .book-card:nth-child(5) { animation-delay: 1s; }
+
+/* Borrowed Button Animation */
+@keyframes staticGlitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, 2px); }
+  80% { transform: translate(1px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.borrowed-anim {
+  background: gold !important;   /* Yellow color */
+  color: #000 !important;        /* Black text for contrast */
+  cursor: default;
+  animation: staticGlitch 0.3s linear 2;
+}

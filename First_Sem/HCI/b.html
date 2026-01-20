@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books | ACALED</title>
+  <link rel="stylesheet" href="books.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1>ACALED</h1>
+    <nav>
+      <ul>
+        <li><a href="Main.html">Home</a></li>
+        <li><a href="b.html" class="active">Books</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Fiction -->
+    <section class="category">
+      <h2>Fiction</h2>
+      <div class="books-row">
+
+        <div class="book-card">
+          <img src="FC1.png">
+          <div class="prize-tag">₱299.00 Only!</div>
+          <div class="overlay"><h3>Life of Tantan</h3><p>by Author Natzui</p><button onclick="expandCard(this)">Details</button></div>
+          <div class="expanded-info"><h3>Life of Tantan</h3><p>by Author Natzui</p><p>A heartwarming story about the adventures of Tantan.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div>
+        </div>
+
+        <div class="book-card">
+          <img src="Ely.jpg">
+          <div class="prize-tag">₱201.00 Only!</div>
+          <div class="overlay"><h3>Elysian Destiny</h3><p>by Madison</p><button onclick="expandCard(this)">Details</button></div>
+          <div class="expanded-info"><h3>Elysian Destiny</h3><p>by Madison</p><p>A collection of Dystopian tales that explore the human condition.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div>
+        </div>
+
+        <div class="book-card">
+          <img src="CityD.jpg">
+          <div class="prize-tag">₱399.00 Only!</div>
+          <div class="overlay"><h3>City Dreams</h3><p>by Merry Warren</p><button onclick="expandCard(this)">Details</button></div>
+          <div class="expanded-info"><h3>City Dreams</h3><p>by Merry Warren</p><p>A thrilling mystery about a hidden powers in the city.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div>
+        </div>
+
+        <div class="book-card">
+          <img src="otspace.png">
+          <div class="prize-tag">₱359.00 Only!</div>
+          <div class="overlay"><h3>The Outer Space</h3><p>by Leo Ramirez</p><button onclick="expandCard(this)">Details</button></div>
+          <div class="expanded-info"><h3>The Outer Space</h3><p>by Leo Ramirez</p><p>A journey through the cosmos and the mysteries it holds.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div>
+        </div>
+
+        <div class="book-card">
+          <img src="Game.jpg">
+          <div class="prize-tag">₱349.00 Only!</div>
+          <div class="overlay"><h3>The Game's King</h3><p>by Matthew O. Bell</p><button onclick="expandCard(this)">Details</button></div>
+          <div class="expanded-info"><h3>The Game's King</h3><p>by Matthew O. Bell</p><p>A thrilling adventure in a world where games determine fate.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Non-Fiction -->
+    <section class="category">
+      <h2>Non-Fiction</h2>
+      <div class="books-row">
+
+        <div class="book-card"><img src="person.jpg"><div class="prize-tag">₱249.00 Only!</div><div class="overlay"><h3>The Missing Person</h3><p>by Sarah Lokson</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>The Missing Person</h3><p>by Sarah Lokson</p><p>A story of young women missing.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="smile.jpg"><div class="prize-tag">₱250.00 Only!</div><div class="overlay"><h3>Be Your Own Reason To Smile</h3><p>by Alexander Alonso</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Be Your Own Reason To Smile</h3><p>by Alexander Alonso</p><p>Finding joy and motivation in everyday life.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="Truth.jpg"><div class="prize-tag">₱299.00 Only!</div><div class="overlay"><h3>Let The Truth Speaks</h3><p>by Andrea Lulea</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Let The Truth Speaks</h3><p>by Andrea Lulea</p><p>Uncovering the hidden truths of our society.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="Modern.jpg"><div class="prize-tag">₱699.00 Only!</div><div class="overlay"><h3>Modern Furniture Design</h3><p>by Loise Kennedy</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Modern Furniture Design</h3><p>by Loise Kennedy</p><p>Exploring contemporary furniture styles and trends.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="Suc.jpg"><div class="prize-tag">₱399.00 Only!</div><div class="overlay"><h3>100 Rules of Success</h3><p>by Rusell Spencer</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>100 Rules of Success</h3><p>by Rusell Spencer</p><p>Proven strategies for achieving your goalss.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="category">
+      <h2>History</h2>
+      <div class="books-row">
+
+        <div class="book-card"><img src="Philo.jpg"><div class="prize-tag">₱494.00 Only!</div><div class="overlay"><h3>History of Philosophy</h3><p>by Francisco Watkinson</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>History of Philosophy</h3><p>by Francisco Watkinson</p><p>Exploring the evolution of philosophical thought.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="histox.jpg"><div class="prize-tag">₱299.00 Only!</div><div class="overlay"><h3>The Last Pharaoh</h3><p>by David Watson</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>The Last Pharaoh</h3><p>by David Watson</p><p>Stories and strategies from global conflicts.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="Bible.jpg"><div class="prize-tag">₱100.00 Only!</div><div class="overlay"><h3>Holy Bible</h3><p>by King James</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Holy Bible</h3><p>by King James</p><p>The sacred scriptures of Christianity.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="Noli.jpg"><div class="prize-tag">₱350.00 Only!</div><div class="overlay"><h3>Noli Me Tangere</h3><p>by Jose Rizal</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Noli Me Tangere</h3><p>by Jose Rizal</p><p>A novel that exposes the ills of Philippine society.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="El.jpg"><div class="prize-tag">₱499.00 Only!</div><div class="overlay"><h3>El Filibusterismo</h3><p>by Jose Rizal</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>El Filibusterismo</h3><p>by Jose Rizal</p><p>A novel that continues the story of Noli Me Tangere.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+      </div>
+    </section>
+
+    <!-- Comics -->
+    <section class="category">
+      <h2>Comics</h2>
+      <div class="books-row">
+
+        <div class="book-card"><img src="Cap.jpg"><div class="prize-tag">₱599.00 Only!</div><div class="overlay"><h3>Captain America</h3><p>by Marvel</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Captain America</h3><p>by Marvel</p><p>The thrilling adventures of Captain America saving the realm.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="robot.png"><div class="prize-tag">₱459.00 Only!</div><div class="overlay"><h3>Maniac Robot Attack</h3><p>by SpaceWorks</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Maniac Robot Attack</h3><p>by SpaceWorks</p><p>A robotic invasion on earth.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="cmhilt.jpg"><div class="prize-tag">₱150.00 Only!</div><div class="overlay"><h3>Master Comics</h3><p>by Ado Hent</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Master Comics</h3><p>by Ado Hent</p><p>Lighthearted comedy and slice-of-life illustrated stories.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="hulk.jpg"><div class="prize-tag">₱159.00 Only!</div><div class="overlay"><h3>Hulk</h3><p>by Marvel</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Hulk</h3><p>by Marvel</p><p>A comic about hulk's life.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+        <div class="book-card"><img src="devfish.jpg"><div class="prize-tag">₱299.00 Only!</div><div class="overlay"><h3>Devil Fish</h3><p>by Digital Ink</p><button onclick="expandCard(this)">Details</button></div><div class="expanded-info"><h3>Devil Fish</h3><p>by Digital Ink</p><p>A fishy story of daily routine.</p><div class="expanded-actions"><button class="buy-btn" onclick="buyBook(this)">Buy</button><button onclick="collapseCard(this)">Close</button><button class="borrow-btn" onclick="borrowBook(this)">Borrow</button></div></div></div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Borrowed Books Modal -->
+  <div id="borrowedModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeBorrowed()">&times;</span>
+      <h2>📚 My Borrowed Books</h2>
+      <ul id="borrowedList"></ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 ACALED | Natzui X </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+  let borrowedBooks = [];
+
+  function expandCard(btn) {
+    let card = btn.closest(".book-card");
+    document.querySelectorAll(".book-card.expanded").forEach(c => c.classList.remove("expanded")); 
+    card.classList.add("expanded");
+  }
+
+  function collapseCard(btn) {
+    let card = btn.closest(".book-card");
+    card.classList.remove("expanded");
+  }
+
+function borrowBook(btn) {
+  let card = btn.closest(".book-card");
+  let title = card.querySelector(".expanded-info h3").innerText;
+  let author = card.querySelector(".expanded-info p").innerText;
+
+  let entry = `${title} - ${author}`;
+  if (!borrowedBooks.includes(entry)) {
+    borrowedBooks.push(entry);
+  }
+
+  // ✅ Change the button to "Borrowed"
+  btn.textContent = "Borrowed";
+  btn.disabled = true;
+  btn.classList.add("borrowed-anim");
+
+  renderBorrowed();
+  openBorrowed();
+}
+
+function removeBook(index) {
+  // Get the title from the removed entry
+  let removedEntry = borrowedBooks[index];
+  borrowedBooks.splice(index, 1);
+  renderBorrowed();
+
+  // Find the matching book-card and reset its button
+  document.querySelectorAll(".book-card").forEach(card => {
+    let title = card.querySelector(".expanded-info h3").innerText;
+    let author = card.querySelector(".expanded-info p").innerText;
+    let entry = `${title} - ${author}`;
+
+    if (entry === removedEntry) {
+      let borrowBtn = card.querySelector(".borrow-btn");
+      borrowBtn.textContent = "Borrow";
+      borrowBtn.disabled = false;
+      borrowBtn.classList.remove("borrowed-anim"); // reset style
+    }
+  });
+}
+
+  function buyBook(btn) {
+    let card = btn.closest(".book-card");
+    let title = card.querySelector(".expanded-info h3").innerText;
+    let author = card.querySelector(".expanded-info p").innerText;
+
+    let bookTitle = encodeURIComponent(title);
+    let bookAuthor = encodeURIComponent(author);
+
+    window.location.href = `payment.html?title=${bookTitle}&author=${bookAuthor}`;
+  }
+
+  function renderBorrowed() {
+    let list = document.getElementById("borrowedList");
+    list.innerHTML = "";
+    borrowedBooks.forEach((book, index) => {
+      let li = document.createElement("li");
+      li.textContent = book;
+      let removeBtn = document.createElement("button");
+      removeBtn.textContent = "Remove";
+            removeBtn.classList.add("remove-btn");
+            removeBtn.onclick = function() {
+              removeBook(index);
+            };
+            li.appendChild(removeBtn);
+            list.appendChild(li);
+          });
+        }
+      function openBorrowed() {
+        document.getElementById("borrowedModal").style.display = "block";
+      }
+    
+      function closeBorrowed() {
+        document.getElementById("borrowedModal").style.display = "none";
+      }
+          </script>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Lending System</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📚 ACALED</h1>
+    <nav>
+      <ul>
+        <li><a href="Main.html" class="active">Home</a></li>
+        <li><a href="b.html">Books</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h2>WELCOME TO ACALED: BOOK 
+      LENDING SERVICE</h2>
+    <p>
+      A simple platform where you can borrow and return books effortlessly. 
+      Browse the collection, reserve your favorite titles, and enjoy reading.
+    </p>
+    <button onclick="alert('Browse Books Coming Soon!')">Explore Books</button>
+  </section>
+
+  <section class="categories">
+    <div class="category card">
+      <h3>WHY US?</h3>
+      <p>
+        We provide a simple and efficient book lending system. 
+        Borrow, Buy and Return books without hassle.
+      </p>
+    </div>
+
+    <div class="category card">
+      <h3>PURCHASE</h3>
+      <p>
+        Every purchase you made you gain points which you can use to borrow books 
+        or buy more books. Which you help us to maintain the system and
+        provide better services.
+      </p>
+    </div>
+
+    <div class="category card">
+      <h3>DEVELOPER</h3>
+      <p>
+        Designed by Natzui X and Developed by Precious we are aiming
+        for a smooth, minimalist, and user-friendly experience.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a href="https://www.facebook.com/N.natzuish1/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://youtu.be/EreWZbhEPOI?si=WlLmz6nDmblyp_F8" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>© 2025 ACALED | Designed by Natzui X</p>
+  </footer>
+
+  <!-- Animation Script -->
+  <script>
+    window.addEventListener("load", () => {
+      // ===== Heading Animation =====
+      const introText = document.querySelector(".intro h2");
+      const text = introText.textContent;
+      introText.textContent = "";
+
+      text.split("").forEach(char => {
+        const span = document.createElement("span");
+        span.textContent = char === " " ? "\u00A0" : char;
+        span.style.display = "inline-block";
+        span.style.opacity = "0";
+        span.style.transform = "translateY(40px)";
+        introText.appendChild(span);
+      });
+
+      gsap.to(".intro h2 span", {
+        opacity: 1,
+        y: 0,
+        duration: 0.3,
+        ease: "power3.out",
+        stagger: 0.02
+      });
+
+      // ===== Paragraph Smooth Fade-in =====
+      gsap.from(".intro p", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power2.out",
+        delay: 1
+      });
+
+      // ===== Animate Categories =====
+      gsap.from(".card", {
+        opacity: 0,
+        y: 60,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.3,
+        delay: 2
+      });
+
+      // ===== Explore Button Pop-in =====
+      gsap.from("button", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.5,
+        delay: 3,
+        ease: "back.out(1.7)"
+      });
+
+      // ===== Footer Fade-in Last =====
+      gsap.from("footer", {
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        delay: 4,
+        ease: "power2.out"
+      });
+    });
+  </script>
+</body>
+</html>

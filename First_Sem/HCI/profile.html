@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | ACALED</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1>ACALED</h1>
+    <nav>
+      <ul>
+        <li><a href="Main.html">Home</a></li>
+        <li><a href="b.html">Books</a></li>
+        <li><a href="profile.html" class="active">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="profile-container">
+    <!-- Profile Card (left side) -->
+    <div class="profile-card">
+      <img src="Avatar.jpg" alt="User Avatar" class="avatar">
+      <p class="user-id">2502234432</p>
+
+      <h2>User Information</h2>
+      <div class="info">
+        <p><strong>Name:</strong> Nathan Allyn S. Acosta</p>
+        <p><strong>Contact Number:</strong> +63 912 345 6789</p>
+        <p><strong>Blood Type:</strong> O+</p>
+        <p><strong>Address:</strong> Butuan City, Philippines</p>
+      </div>
+
+      <div class="actions">
+        <button>Edit</button>
+        <button>Save</button>
+      </div>
+    </div>
+
+    <!-- Profile Content (right side) -->
+    <div class="profile-content">
+      <h2 id="animatedText">Borrowed Books</h2>
+
+      <!-- Book Cards -->
+      <div class="book-container">
+        <div class="book-card">
+          <img src="CityD.jpg" alt="Book 1" class="book-img">
+          <h3>City of Dreams</h3>
+          <p>Author: Merry Warren</p>
+          <p>Category: Fiction</p>
+ 
+        </div>
+
+        <div class="book-card">
+          <img src="Philo.jpg" alt="Book 2" class="book-img">
+          <h3>History of Philosophy</h3>
+          <p>Author: Francisco Watkinson</p>
+          <p>Category: History</p>
+
+        </div>
+
+        <div class="book-card">
+          <img src="robot.png" alt="Book 3" class="book-img">
+          <h3>Maniac Robotic Attack</h3>
+          <p>Author: Spaceworks</p>
+          <p>Category: Comics</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 ACALED | Natzui X</p>
+  </footer>
+
+  <!-- External JS -->
+  <script src="profile.js"></script>
+</body>
+</html>
