@@ -1,0 +1,22 @@
+body {
+    background-color: #141414;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 500px;
+}
+
+.btn-netflix {
+    background-color: #e50914;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-netflix:hover {
+    background-color: #b20710;
+}
